@@ -1,0 +1,50 @@
+{
+  "cloudFunctionsNotifications": {
+    "message1": "te invitó a colaborar.",
+    "message2": {
+      "user": "Usuario",
+      "desactive": "desactivar notificaciones como",
+      "notSend": "No se enviará."
+    },
+    "message3": {
+      "beforeSnap": "Comentario",
+      "deleted": "eliminado. Procesando posibles notificaciones (opcional)."
+    },
+    "message4": {
+      "assigned": "te asignó un nuevo comentario en"
+    },
+    "message5": {
+      "statusChanged": "Estado del comentario",
+      "inProject": "en",
+      "changedTo": "fue cambiado a"
+    },
+    "message6": {
+      "edited": "editó un comentario asignado a ti en"
+    },
+    "message7": {
+      "assignedYou": "te asignó a un comentario en"
+    },
+    "message8": {
+      "replySnapshotNotFound": "Instantánea de respuesta no encontrada para el comentario"
+    },
+    "message9": {
+      "replyDataMissing": "Faltan datos de la respuesta para:"
+    },
+    "message10": {
+      "parentCommentNotFound": "Comentario padre no encontrado para la respuesta"
+    },
+    "message11": {
+      "parentCommentDataMissing": "Faltan datos del comentario padre para"
+    },
+    "message12": {
+      "replied": "respondió a un comentario en"
+    },
+    "message13": {
+      "statusUpdated": "El estado del proyecto",
+      "updatedTo": "fue actualizado a"
+    },
+    "message14": {
+      "addedAsCollaborator": "Fuiste añadido como colaborador al proyecto"
+    }
+  }
+}

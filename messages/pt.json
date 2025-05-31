@@ -1,0 +1,1501 @@
+{
+  "auth": {
+    "toastAuth": {
+      "toastLoginSuccessTitle": "Login Bem-Sucedido",
+      "toastLoginSuccessDescription": "Redirecionando...",
+      "toastLoginFailureTitle": "Falha no Login",
+      "toastSignupSuccessTitle": "Conta Criada",
+      "toastSignupSuccessDescription": "Cadastro realizado com sucesso! Enviamos um link de confirmação para seu e-mail. Verifique sua caixa de entrada (e também o spam).",
+      "toastSignupFailureTitle": "Falha no Cadastro",
+      "toastGoogleSuccessTitle": "Login com Google Bem-Sucedido",
+      "toastGoogleFailureTitle": "Falha no Login com Google",
+      "errorFallbackUnexpectedLogin": "Falha no login (resultado inesperado).",
+      "errorFallbackUnexpectedSignup": "Falha no cadastro (resultado inesperado).",
+      "errorFallbackGeneric": "Erro desconhecido ou formato de resposta inesperado.",
+      "errorSessionCreationLogin": "Falha ao criar sessão no servidor.",
+      "errorSessionCreationSignup": "Cadastro bem-sucedido, mas falha ao criar sessão no servidor.",
+      "errorNetwork": "Erro de conexão. Verifique sua internet ou se os emuladores estão ativos.",
+      "errorInitialization": "Erro de inicialização. Recarregue a página ou contate o suporte.",
+      "errorSession": "Erro de sessão:",
+      "errorGoogleNetwork": "Erro de conexão com Google. Verifique sua internet.",
+      "errorGoogleSession": "Login com Google bem-sucedido, mas falha ao criar sessão no servidor.",
+      "labelTermsDialogTitle": "Termos e Condições de Uso",
+      "labelPrivacyDialogTitle": "Política de Privacidade",
+      "labelCookiesDialogTitle": "Política de Cookies"
+    },
+    "loading": "Carregando...",
+    "welcomeBack": "Bem-vindo de volta!",
+    "createAccountTitle": "Crie sua Conta",
+    "loginDescription": "Faça login para continuar gerenciando seus projetos.",
+    "signupDescription": "Preencha os dados para começar.",
+    "tabLogin": "Login",
+    "tabSignup": "Criar Conta",
+    "emailLabel": "Email",
+    "emailPlaceholder": "seu.email@exemplo.com",
+    "passwordLabel": "Senha",
+    "forgotPassword": "Esqueceu sua senha?",
+    "yourPassword": "Sua senha",
+    "showPassword": "Mostrar senha",
+    "hidePassword": "Ocultar senha",
+    "rememberMe": "Lembrar minha senha",
+    "loggingIn": "Entrando...",
+    "loginButton": "Entrar",
+    "nameLabel": "Nome Completo",
+    "namePlaceholder": "Seu nome completo",
+    "signupPasswordPlaceholder": "Crie uma senha forte",
+    "confirmPasswordLabel": "Confirmar Senha",
+    "confirmPasswordPlaceholder": "Confirme sua senha",
+    "creatingAccount": "Criando...",
+    "createAccountButton": "Criar Conta",
+    "orContinueWith": "ou continue com",
+    "loginWithGoogle": "Login com Google",
+    "loginWithApple": "Login com Apple",
+    "loginWithFacebook": "Login com Facebook",
+    "acceptTermsPrefix": "Li e aceito os",
+    "termsOfUse": "Termos de Uso",
+    "and": "e a",
+    "privacyPolicy": "Política de Privacidade",
+    "cookies": "Cookies",
+    "footerPrivacy": "Política de Privacidade",
+    "footerTerms": "Termos & Condições"
+  },
+  "dashboard": {
+    "title": "Painel",
+    "cards": {
+      "totalInvestment": {
+        "header": "Investimento Total",
+        "description": "Em todos os projetos"
+      },
+      "totalProjects": {
+        "header": "Total de Projetos",
+        "description": "Gerenciados por você"
+      },
+      "sharedProjects": {
+        "header": "Projetos Compartilhados",
+        "description": "Compartilhados com você"
+      },
+      "totalCollaborators": {
+        "header": "Total de Colaboradores",
+        "description": "Em seus projetos"
+      }
+    },
+    "charts": {
+      "projectsCreated": {
+        "title": "Projetos Criados ao Longo do Tempo",
+        "description": "Tendência mensal de criação de projetos"
+      },
+      "statusDistribution": {
+        "title": "Distribuição de status dos projetos",
+        "description": "Percentual de projetos por status"
+      },
+      "collaboratorsPerProject": {
+        "title": "Colaboradores por projeto",
+        "description": "Número de colaboradores atribuídos"
+      },
+      "investmentGrowth": {
+        "title": "Crescimento do investimento ao longo do tempo",
+        "description": "Tendência mensal de investimento"
+      }
+    },
+    "updatesSection": {
+      "title": "Atualizações e Notificações",
+      "newPlatformUpdate": {
+        "title": "Nova Atualização da Plataforma Disponível!",
+        "description": "Confira os recursos e melhorias mais recentes."
+      },
+      "newInvitation": {
+        "title": "Novo Convite de Colaboração",
+        "description": "Você tem um novo convite aguardando."
+      },
+      "lastProjectActivity": {
+        "title": "Última Atividade do Projeto",
+        "description": "Última atualização ou criação em {lastProjectUpdate}."
+      },
+      "paymentIssue": {
+        "title": "Problema de Pagamento",
+        "description": "Ação necessária: por favor, atualize seu método de pagamento."
+      }
+    }
+  },
+  "collaborators": {
+    "collaboratorsPage": {
+      "title": "Colaboradores",
+      "inviteButton": "Convidar Colaborador",
+      "myCollaborators": {
+        "title": "Meus Colaboradores",
+        "description": "Pessoas que você adicionou como colaboradores."
+      },
+      "noCollaborators": "Você ainda não adicionou nenhum colaborador.",
+      "unknown": "Desconhecido",
+      "noEmail": "Sem e-mail",
+      "viewProfile": "Visualizar perfil do colaborador"
+    },
+    "receivedInvitations": {
+      "title": "Convites Recebidos",
+      "description": "Convites para colaborar.",
+      "noInvitations": "Você não tem convites pendentes.",
+      "invited": "convidou você para colaborar."
+    },
+    "inviteCollaborator": {
+      "dialogTitle": "Convidar Colaborador",
+      "dialogDescription": "Insira o endereço de email da pessoa que você deseja convidar para colaborar.",
+      "form": {
+        "emailLabel": "Endereço de email",
+        "emailPlaceholder": "nome@exemplo.com"
+      },
+      "buttons": {
+        "cancel": "Cancelar",
+        "sendInvite": "Enviar Convite",
+        "sending": "Enviando..."
+      },
+      "toast": {
+        "invitationSent": {
+          "title": "Convite Enviado",
+          "description": "Um convite foi enviado para"
+        },
+        "errorSendingInvitation": {
+          "title": "Erro ao enviar convite",
+          "description": "Não foi possível enviar o convite. Por favor, tente novamente."
+        }
+      }
+    }
+  },
+  "comments": {
+    "pageTitle": "Comentários",
+    "tabs": {
+      "myComments": "Meus comentários",
+      "receivedComments": "Comentários recebidos"
+    },
+    "buttons": {
+      "archived": "Arquivados"
+    },
+    "sections": {
+      "myComments": {
+        "title": "Meus comentários",
+        "description": "Comentários que você criou ou nos quais foi atribuído.",
+        "noComments": "Nenhum comentário encontrado que corresponda aos filtros nesta seção."
+      },
+      "receivedComments": {
+        "title": "Comentários recebidos",
+        "description": "Comentários atribuídos a você por outros.",
+        "noComments": "Nenhum comentário encontrado que corresponda aos filtros nesta seção."
+      }
+    },
+    "statusChange": {
+      "toast": {
+        "result": {
+          "title": "Status atualizado",
+          "description": "Status do comentário alterado para"
+        },
+        "error": {
+          "title": "Erro ao atualizar status",
+          "description": "Não foi possível atualizar o status."
+        }
+      }
+    },
+    "loading": {
+      "toast": {
+        "error": {
+          "title": "Erro ao carregar dados",
+          "description": "Não foi possível carregar comentários, tags, projetos ou colaboradores. Por favor, tente novamente."
+        }
+      }
+    },
+    "updated": {
+      "toast": {
+        "result": "Erro ao atualizar comentário",
+        "error": {
+          "title": "Erro ao atualizar comentário:",
+          "description": "Falha ao atualizar o comentário."
+        }
+      }
+    },
+    "archiving": {
+      "toast": {
+        "result": {
+          "title": "Status atualizado",
+          "description": "Status do comentário alterado para"
+        },
+        "error": {
+          "title": "Erro ao arquivar",
+          "description": "Comentário não encontrado.",
+          "description2": "Não foi possível arquivar o comentário."
+        }
+      }
+    },
+    "onProject": "no projeto",
+    "assignedTo": "Atribuído a:",
+    "statuses": {
+      "pending": "Pendente",
+      "inProgress": "Em andamento",
+      "paused": "Pausado",
+      "completed": "Concluído"
+    },
+    "commentCard": {
+      "created": "Criado",
+      "by": "por",
+      "replies": "Respostas",
+      "lastReply": "Última resposta",
+      "edit": "Editar",
+      "archive": "Arquivar"
+    },
+    "addCommentDialog": {
+      "button": "Adicionar Comentário",
+      "title": "Adicionar Novo Comentário",
+      "description": "Selecione o projeto, escreva seu comentário e, se quiser, atribua alguém."
+    },
+    "addCommentForm": {
+      "projectLabel": "Projeto *",
+      "projectPlaceholder": "Selecione um projeto...",
+      "projectNoProjects": "Nenhum projeto disponível",
+      "commentLabel": "Comentário *",
+      "commentPlaceholder": "Digite seu comentário ou descrição da tarefa...",
+      "assigneeLabel": "Atribuir a (Opcional)",
+      "assigneePopoverTrigger": {
+        "placeholder": "Selecionar colaboradores...",
+        "noCollaborators": "Nenhum colaborador disponível"
+      },
+      "assigneeSearchPlaceholder": "Buscar colaboradores...",
+      "assigneeNoResults": "Nenhum colaborador encontrado.",
+      "formButtons": {
+        "cancel": "Cancelar",
+        "submit": "Adicionar Comentário",
+        "submitting": "Adicionando..."
+      },
+      "toast": {
+        "success": {
+          "title": "Comentário Adicionado",
+          "description": "Seu comentário foi adicionado com sucesso."
+        },
+        "error": {
+          "title": "Erro ao Adicionar Comentário",
+          "description": "Não foi possível adicionar o comentário. Por favor, tente novamente."
+        }
+      }
+    },
+    "archive-confirmation-dialog": {
+      "toast": {
+        "response": {
+          "title": "Comentário Arquivado",
+          "description": "Comentário",
+          "description2": "arquivado."
+        },
+        "error": {
+          "title": "Erro ao Arquivar Comentário",
+          "description": "Não foi possível arquivar o comentário. Por favor, tente novamente."
+        }
+      },
+      "dialog-content": {
+        "title": "Arquivar este comentário?",
+        "description": "Comentários arquivados podem ser visualizados depois, mas ficarão ocultos nas listas principais. Tem certeza de que deseja arquivar este comentário?",
+        "cancel": "Cancelar",
+        "archiving": "Arquivando...",
+        "archive": "Arquivar"
+      }
+    },
+    "delete-reply-dialog": {
+      "title": "Tem certeza absoluta?",
+      "description": "Esta ação não pode ser desfeita. Isso excluirá permanentemente esta resposta.",
+      "cancel": "Cancelar",
+      "delete-reply": "Excluir Resposta"
+    },
+    "edit-comment-dialog": {
+      "title": "Editar Comentário",
+      "description": "Atualize os detalhes do comentário abaixo."
+    },
+    "editCommentForm": {
+      "projectLabel": "Projeto *",
+      "projectPlaceholder": "Selecione um projeto...",
+      "projectNoProjects": "Nenhum projeto disponível",
+      "commentLabel": "Comentário *",
+      "commentPlaceholder": "Digite seu comentário ou descrição da tarefa...",
+      "assigneeLabel": "Atribuir a (Opcional)",
+      "assigneePopoverTrigger": {
+        "placeholder": "Selecionar colaboradores...",
+        "noCollaborators": "Nenhum colaborador disponível"
+      },
+      "assigneeSearchPlaceholder": "Buscar colaboradores...",
+      "assigneeNoResults": "Nenhum colaborador encontrado.",
+      "formButtons": {
+        "cancel": "Cancelar",
+        "submit": "Atualizar Comentário",
+        "submitting": "Atualizando..."
+      },
+      "toast": {
+        "success": {
+          "title": "Comentário Atualizado",
+          "description": "Seu comentário foi atualizado com sucesso."
+        },
+        "error": {
+          "title": "Erro ao Atualizar Comentário",
+          "description": "Falha ao atualizar o comentário. Por favor, tente novamente."
+        }
+      }
+    },
+    "replyDialog": {
+      "title": "Respostas ao Comentário",
+      "description": {
+        "prefix": "Respondendo ao comentário:",
+        "noReplies": "Nenhuma resposta ainda."
+      },
+      "replyCard": {
+        "deleteReply": "Excluir Resposta",
+        "like": "Curtir",
+        "dislike": "Não curtir"
+      },
+      "input": {
+        "placeholder": "Adicionar uma resposta...",
+        "send": "Enviar",
+        "sending": "Enviando...",
+        "attach": "Anexar arquivo"
+      },
+      "toast": {
+        "replySent": {
+          "title": "Resposta Enviada"
+        },
+        "replyError": {
+          "title": "Erro ao Enviar Resposta",
+          "description": "Falha ao enviar resposta. Por favor, tente novamente."
+        },
+        "deleteSuccess": {
+          "title": "Resposta Excluída"
+        },
+        "deleteError": {
+          "title": "Erro ao Excluir Resposta",
+          "description": "Não foi possível excluir a resposta. Por favor, tente novamente."
+        }
+      }
+    },
+    "archivedPage": {
+      "title": "Comentários Arquivados",
+      "backButton": "Voltar para Comentários",
+      "card": {
+        "title": "Arquivados",
+        "description": "Comentários que foram arquivados."
+      },
+      "noComments": "Atualmente não há comentários arquivados.",
+      "unarchive": {
+        "button": "Restaurar",
+        "loading": "Restaurando...",
+        "toast": {
+          "success": {
+            "title": "Comentário Restaurado",
+            "description": "O comentário foi movido de volta para sua lista ativa."
+          },
+          "error": {
+            "title": "Erro ao Restaurar Comentário",
+            "description": "Não foi possível restaurar o comentário."
+          }
+        }
+      },
+      "loading": {
+        "toast": {
+          "title": "Erro ao Carregar Comentários Arquivados",
+          "description": "Não foi possível carregar os comentários arquivados. Por favor, tente novamente."
+        }
+      },
+      "meta": {
+        "created": "Criado",
+        "by": "por",
+        "onProject": "no projeto",
+        "archivedAt": "Arquivado em"
+      },
+      "status": {
+        "archivedSuffix": "(Arquivado)"
+      }
+    }
+  },
+  "filters": {
+    "tags": {
+      "label": "Tags",
+      "searchPlaceholder": "Buscar tags...",
+      "empty": "Nenhuma tag encontrada.",
+      "selected": "Tag(s)"
+    },
+    "status": {
+      "placeholder": "Todos os Status",
+      "all": "Todos os Status"
+    },
+    "date": {
+      "label": "Intervalo de Datas",
+      "clear": "Limpar Data"
+    },
+    "search": {
+      "placeholder": "Buscar..."
+    },
+    "clear": {
+      "button": "Limpar"
+    },
+    "badges": {
+      "label": "Tags:",
+      "removeTitle": "Remover"
+    }
+  },
+  "helpCenter": {
+    "page": {
+      "title": "Central de Ajuda",
+      "subtitle": "Como podemos ajudar você hoje?",
+      "search": {
+        "placeholder": "Pesquisar artigos de ajuda...",
+        "clear": "Limpar busca"
+      }
+    },
+    "noResults": {
+      "title": "Nenhum resultado encontrado",
+      "description": "Tente usar palavras-chave diferentes."
+    },
+    "sections": {
+      "topics": {
+        "titleDefault": "Tópicos Populares",
+        "titleSearch": "Tópicos Encontrados",
+        "stepsTitle": "Passos:"
+      },
+      "faqs": {
+        "titleDefault": "Perguntas Frequentes",
+        "titleSearch": "FAQs Encontradas"
+      }
+    },
+    "topics": {
+      "topic1": {
+        "name": "Gerenciando Projetos",
+        "description": "Aprenda a criar, visualizar, editar e excluir seus projetos.",
+        "step1": "Navegue até \"Meus Projetos\".",
+        "step2": "Clique em \"Adicionar Novo Projeto\" para criar.",
+        "step3": "Preencha os detalhes (nome, descrição, datas, status, tags, etc.).",
+        "step4": "Para visualizar detalhes, clique em \"Ver Detalhes\" em um projeto existente.",
+        "step5": "Dentro dos detalhes, use os botões para Editar ou Excluir o projeto."
+      },
+      "topic2": {
+        "name": "Gerenciando Colaboradores",
+        "description": "Convide, remova e visualize perfis de colaboradores. Aceite ou recuse convites.",
+        "step1": "Vá para a página \"Colaboradores\".",
+        "step2": "Para convidar, clique em \"Convidar Colaborador\" e insira o e-mail.",
+        "step3": "Para remover, encontre o colaborador e clique no ícone de lixeira (será solicitado confirmação).",
+        "step4": "Para ver o perfil, clique no ícone de olho.",
+        "step5": "Na seção \"Convites Recebidos\", clique em \"Accept\" ou \"Decline\"."
+      },
+      "topic3": {
+        "name": "Usando Comentários",
+        "description": "Como adicionar, atribuir, responder, editar, arquivar e gerenciar comentários/tarefas.",
+        "step1": "Navegue até a página \"Comentários\".",
+        "step2": "Clique em \"Adicionar Comentário\" para criar um novo.",
+        "step3": "Selecione o projeto, escreva o comentário e atribua a um colaborador (opcional).",
+        "step4": "Use o seletor de status para atualizar o andamento.",
+        "step5": "Use o menu de ações (...) para Editar ou Arquivar.",
+        "step6": "Clique no botão de respostas para ver/adicionar respostas.",
+        "step7": "Acesse \"Comentários Arquivados\" para ver ou restaurar comentários."
+      },
+      "topic4": {
+        "name": "Gerenciando Tags",
+        "description": "Crie, edite e exclua tags para organizar seus projetos e comentários.",
+        "step1": "Vá para a página \"Tags\".",
+        "step2": "Clique em \"Adicionar Tag\" para criar uma nova tag com nome, descrição e cor.",
+        "step3": "Use os botões de Editar (lápis) ou Excluir (lixeira) em cada tag listada."
+      },
+      "topic5": {
+        "name": "Configurações e Perfil",
+        "description": "Como atualizar seu perfil, gerenciar cobranças, e definir preferências.",
+        "step1": "Vá para \"Configurações\" para gerenciar detalhes da conta, planos e cobrança, opções de idioma/moeda e preferências de notificação por e-mail.",
+        "step2": "Vá para \"Perfil\" para atualizar seu avatar, nome, bio, links sociais e tags pessoais (hobbies, habilidades, educação)."
+      },
+      "topic6": {
+        "name": "Navegação e Aparência",
+        "description": "Como usar a barra lateral, navegação inferior (mobile) e alternar temas.",
+        "step1": "Use a barra lateral (desktop) ou a barra de navegação inferior (mobile) para acessar as diferentes seções.",
+        "step2": "Clique no ícone de sol/lua no cabeçalho para alternar entre os modos claro e escuro."
+      },
+      "topic7": {
+        "name": "Notificações",
+        "description": "Como visualizar e gerenciar suas notificações.",
+        "step1": "Clique no ícone de sino no cabeçalho para ver as notificações recentes.",
+        "step2": "Clique em \"Ver todas as notificações\" para ir à página completa.",
+        "step3": "Na página de notificações, navegue pelos meses usando as setas.",
+        "step4": "Clique em \"Marcar todas como lidas\"."
+      }
+    },
+    "faqs": {
+      "faq1": {
+        "question": "Como altero minha senha?",
+        "answer": "Vá para Configurações > Conta. Clique no botão \"Change Password\" e siga as instruções, ou use o link \"Forgot? Send Reset Link\" para redefinir via e-mail."
+      },
+      "faq2": {
+        "question": "Posso usar o Projectude offline?",
+        "answer": "Projectude é uma aplicação web e requer conexão ativa com a internet para acesso e atualização em tempo real."
+      },
+      "faq3": {
+        "question": "O que acontece se eu precisar de mais recursos que o plano Free oferece?",
+        "answer": "O plano Free possui limitações, como não permitir a criação e gerenciamento de projetos. Para acesso completo, considere o plano Premium. Detalhes e opções de assinatura (mensal, anual, bianual) estão em Configurações > Plano & Billing."
+      },
+      "faq4": {
+        "question": "Como meus dados são protegidos?",
+        "answer": "Priorizamos a segurança dos dados usando práticas de criptografia padrão para dados em trânsito e em repouso. Detalhes específicos dependem da implementação final."
+      },
+      "faq5": {
+        "question": "Existe um aplicativo móvel?",
+        "answer": "Atualmente, Projectude é otimizado para navegadores web em desktops e dispositivos móveis (com layout responsivo e barra de navegação inferior). Um aplicativo móvel dedicado não está disponível no momento."
+      },
+      "faq6": {
+        "question": "Como funcionam os convites de colaborador?",
+        "answer": "Convidar um colaborador permite que você o adicione aos seus projetos. Eles receberão um convite por e-mail e, se aceitarem, aparecerão na sua lista de colaboradores, prontos para serem atribuídos a projetos específicos."
+      },
+      "faq7": {
+        "question": "Para que serve a seção \"Compartilhados Comigo\"?",
+        "answer": "Esta seção lista os projetos criados por outros usuários que adicionaram você como colaborador. Você pode visualizar os detalhes desses projetos, mas não pode editá-los ou excluí-los diretamente desta seção."
+      }
+    }
+  },
+  "projects": {
+    "createProjectsToasts": {
+      "error": "Erro",
+      "errorLoadTag": "Não foi possível carregar colaboradores ou tags.",
+      "projectUpdated": "Projeto Atualizado",
+      "projectCreated": "Projeto Criado",
+      "updated": "atualizado",
+      "created": "criado com sucesso",
+      "fail": "Falha ao",
+      "update": "atualizar",
+      "create": "criar",
+      "project": "projeto.",
+      "tooManyFile": "Muitos arquivos",
+      "youCanOnlyAdd": "Você só pode adicionar",
+      "moreFileMaximum": "mais arquivo(s). O máximo é"
+    },
+    "add-project-button": {
+      "projectDialog": {
+        "button": "Adicionar Novo Projeto",
+        "editTitle": "Editar Projeto",
+        "createTitle": "Criar Novo Projeto",
+        "editDescription": "Atualize os detalhes do seu projeto abaixo.",
+        "createDescription": "Preencha os detalhes abaixo para criar seu novo projeto."
+      }
+    },
+    "form": {
+      "sections": {
+        "images": {
+          "title": "Imagens",
+          "description": "Envie logotipo e imagem de capa para identidade visual.",
+          "logoLabel": "Logo",
+          "coverLabel": "Capa",
+          "logoFallback": "Logo",
+          "coverFallback": "Capa"
+        },
+        "basicInfo": {
+          "investmentLabel": "Investimento",
+          "investmentPlaceholder": "Digite aqui o valor do investimento",
+          "title": "Informações Básicas",
+          "projectNameLabel": "Nome do Projeto *",
+          "projectNamePlaceholder": "ex: Campanha de Marketing Q3",
+          "descriptionLabel": "Descrição",
+          "descriptionPlaceholder": "Descreva os objetivos, escopo, etc.",
+          "startDateLabel": "Data de Início",
+          "startDatePlaceholder": "Escolha uma data",
+          "statusLabel": "Status *",
+          "statusPlaceholder": "Selecione o status",
+          "statusOptions": {
+            "pending": "Pendente",
+            "inProgress": "Em Andamento",
+            "paused": "Pausado",
+            "completed": "Concluído"
+          },
+          "tagsLabel": "Tags",
+          "tagsPlaceholder": "Selecione tags...",
+          "tagsPlaceholderSelected": "tag(s) selecionada(s)",
+          "tagsSearch": "Buscar tags...",
+          "tagsNoneFound": "Nenhuma tag encontrada."
+        },
+        "location": {
+          "title": "Localização",
+          "isPhysicalLabel": "Este é um projeto físico?",
+          "countryLabel": "País",
+          "countryPlaceholder": "ex: Brasil",
+          "stateLabel": "Estado/Província",
+          "statePlaceholder": "ex: Tocantins",
+          "cityLabel": "Cidade",
+          "cityPlaceholder": "ex: Palmas",
+          "neighborhoodLabel": "Bairro",
+          "neighborhoodPlaceholder": "ex: Plano Diretor Sul",
+          "streetLabel": "Endereço",
+          "streetPlaceholder": "ex: Quadra ACSO 50, Av. JK"
+        },
+        "links": {
+          "title": "Links",
+          "addLink": "Adicionar Link",
+          "description": "Adicione links relevantes como site, redes sociais, repositórios.",
+          "iconLabel": "Ícone",
+          "placeholderIcon": "Selecione o Ícone",
+          "urlLabel": "URL *",
+          "urlPlaceholder": "https://exemplo.com",
+          "noLinks": "Nenhum link adicionado ainda.",
+          "removeLink": "Remover Link"
+        },
+        "credentials": {
+          "title": "Credenciais",
+          "addCredential": "Adicionar Credencial",
+          "description": "Armazene credenciais relacionadas ao projeto com segurança (use com responsabilidade).",
+          "descriptionLabel": "Descrição *",
+          "descriptionPlaceholder": "ex: Servidor Staging SSH",
+          "emailLabel": "Email/Usuário",
+          "emailPlaceholder": "Opcional",
+          "passwordLabel": "Senha",
+          "passwordPlaceholder": "Opcional",
+          "togglePasswordShow": "Mostrar senha",
+          "togglePasswordHide": "Ocultar senha",
+          "urlLabel": "URL",
+          "urlPlaceholder": "https://login.exemplo.com (Opcional)",
+          "removeCredential": "Remover Credencial",
+          "noCredentials": "Nenhuma credencial adicionada ainda."
+        },
+        "collaborators": {
+          "title": "Colaboradores",
+          "description": "Selecione colaboradores e gerencie a visibilidade das credenciais.",
+          "addCollaboratorsLabel": "Adicionar Colaboradores",
+          "selectCollaboratorsPlaceholder": "Selecione colaboradores...",
+          "manageCollaborators": "Gerenciar Colaboradores",
+          "searchPlaceholder": "Buscar colaboradores...",
+          "noCollaboratorsFound": "Nenhum colaborador encontrado.",
+          "canViewLabel": "Pode Ver Credenciais",
+          "removeCollaborator": "Remover"
+        },
+        "attachments": {
+          "title": "Anexos",
+          "addFiles": "Adicionar Arquivos",
+          "description": "Anexe arquivos relevantes",
+          "noAttachments": "Nenhum arquivo anexado ainda.",
+          "removeAttachment": "Remover anexo"
+        }
+      },
+      "actions": {
+        "cancel": "Cancelar",
+        "create": "Criar Projeto",
+        "createLoading": "Criando...",
+        "update": "Atualizar Projeto",
+        "updateLoading": "Atualizando..."
+      }
+    },
+    "projectDetails": {
+      "dialog": {
+        "deleteToastTitle": "Projeto Excluído",
+        "deleteToastDescription": "Projeto",
+        "deleteToastDescription2": "foi excluído.",
+        "deleteErrorToastTitle": "Erro ao Excluir Projeto",
+        "deleteErrorToastDescription": "Ocorreu um problema ao excluir o projeto. Por favor, tente novamente.",
+        "startDateLabel": "Início:",
+        "status": {
+          "Pendente": "Pendente",
+          "Em Andamento": "Em Andamento",
+          "Pausado": "Pausado",
+          "Concluído": "Concluído"
+        },
+        "sections": {
+          "tags": {
+            "title": "Tags"
+          },
+          "investment": {
+            "title": "Investimento"
+          },
+          "location": {
+            "title": "Localização"
+          },
+          "links": {
+            "title": "Links"
+          },
+          "collaborators": {
+            "title": "Colaboradores",
+            "canView": "Pode ver credenciais",
+            "cannotView": "Não pode ver credenciais"
+          },
+          "credentials": {
+            "title": "Credenciais",
+            "label": {
+              "url": "URL",
+              "email": "Email/Usuário",
+              "password": "Senha"
+            }
+          },
+          "attachments": {
+            "title": "Anexos",
+            "fallbackName": "Anexo {index}"
+          }
+        },
+        "footer": {
+          "deleteButton": "Excluir Projeto",
+          "deleteConfirmTitle": "Você tem certeza absoluta?",
+          "deleteConfirmDescription": "Esta ação não pode ser desfeita. Isso excluirá permanentemente o projeto e todos os dados associados.",
+          "deleteCancel": "Cancelar",
+          "deleteContinue": "Continuar",
+          "closeButton": "Fechar",
+          "editButton": "Editar Projeto"
+        }
+      }
+    },
+    "projects-list": {
+      "pageTitle": "Meus Projetos",
+      "emptyState": {
+        "title": "Nenhum projeto encontrado",
+        "description": "Tente ajustar seus filtros ou crie um novo projeto.",
+        "clearFilters": "Limpar Filtros"
+      },
+      "cover": "Capa",
+      "card": {
+        "noDescription": "Sem descrição",
+        "startDateLabel": "Data de Início:",
+        "investmentLabel": "Investimento",
+        "locationLabel": "Localização",
+        "coverPlaceholder": "Capa",
+        "viewDetails": "Ver Detalhes"
+      },
+      "statusOptions": {
+        "pending": "Pendente",
+        "inProgress": "Em Andamento",
+        "paused": "Pausado",
+        "completed": "Concluído"
+      }
+    },
+    "shared-projects": {
+      "sharedProjectDetails": {
+        "startDateLabel": "Início:",
+        "status": {
+          "pending": "Pendente",
+          "inProgress": "Em Andamento",
+          "paused": "Pausado",
+          "completed": "Concluído"
+        },
+        "sections": {
+          "tags": {
+            "title": "Tags"
+          },
+          "investment": {
+            "title": "Investimento"
+          },
+          "location": {
+            "title": "Localização"
+          },
+          "links": {
+            "title": "Links"
+          },
+          "collaborators": {
+            "title": "Colaboradores"
+          },
+          "credentials": {
+            "title": "Credenciais",
+            "label": {
+              "url": "URL",
+              "email": "Email/Usuário",
+              "password": "Senha"
+            },
+            "noPermission": {
+              "title": "Permissão Necessária",
+              "description": "Você não tem permissão para visualizar as credenciais deste projeto."
+            }
+          },
+          "attachments": {
+            "title": "Anexos",
+            "fallback": "Anexo {index}"
+          }
+        },
+        "footer": {
+          "closeButton": "Fechar"
+        }
+      },
+      "project-list": {
+        "pageTitle": "Compartilhados comigo",
+        "emptyState": {
+          "title": "Nenhum projeto encontrado",
+          "description": "Nenhum projeto compartilhado foi encontrado com os filtros atuais.",
+          "clearFilters": "Limpar Filtros"
+        },
+        "card": {
+          "noDescription": "Sem descrição",
+          "createdLabel": "Criado",
+          "creatorLabel": "Criado por",
+          "viewDetails": "Ver Detalhes",
+          "status": {
+            "pending": "Pendente",
+            "inProgress": "Em Andamento",
+            "paused": "Pausado",
+            "completed": "Concluído"
+          }
+        }
+      }
+    }
+  },
+  "notifications": {
+    "pageTitle": "Notificações",
+    "dropdown": {
+      "badgeLabel": "Notificações não lidas",
+      "loading": "Carregando...",
+      "empty": "Sem novas notificações.",
+      "viewAll": "Ver todas as notificações"
+    },
+    "types": {
+      "invite": "Convite",
+      "project_update": "Atualização do projeto",
+      "comment_new": "Novo comentário",
+      "comment_reply": "Resposta ao comentário",
+      "comment_status": "Atualização de status do comentário",
+      "system_alert": "Alerta do sistema",
+      "other": "Outro"
+    },
+    "markAllRead": {
+      "button": "Marcar todas como lidas",
+      "toastAllReadTitle": "Nenhuma notificação nova",
+      "toastAllReadDescription": "Todas as notificações já foram marcadas como lidas.",
+      "toastSuccessTitle": "Notificações Lidas",
+      "toastSuccessDescription": "Todas as notificações foram marcadas como lidas."
+    },
+    "emptyState": {
+      "title": "Você não tem nenhuma notificação."
+    },
+    "monthNavigation": {
+      "previous": "Mês anterior",
+      "next": "Próximo mês"
+    },
+    "notificationsList": {
+      "empty": "Sem notificações para este mês."
+    }
+  },
+  "onboarding": {
+    "title": "Complete sua Configuração",
+    "description": "Precisamos de mais algumas informações para personalizar sua experiência.",
+    "errors": {
+      "missingStep1Data": {
+        "title": "Erro",
+        "description": "Dados da etapa anterior estão faltando. Por favor, comece novamente."
+      },
+      "notLoggedIn": {
+        "title": "Você precisa estar logado",
+        "description": "Faça login para continuar."
+      },
+      "saveFailed": {
+        "title": "Erro ao Salvar",
+        "description": "Não foi possível salvar suas informações. Tente novamente."
+      },
+      "unexpected": {
+        "title": "Erro Inesperado",
+        "description": "Ocorreu um erro ao salvar suas informações."
+      }
+    },
+    "success": {
+      "title": "Configuração Concluída!",
+      "description": "Seu perfil foi atualizado. Redirecionando..."
+    },
+    "step1": {
+      "fields": {
+        "phone": {
+          "label": "Telefone (Opcional)",
+          "placeholder": "Seu número de telefone"
+        },
+        "location": {
+          "title": "Localização",
+          "country": {
+            "label": "País *",
+            "placeholder": "e.g., Brasil"
+          },
+          "state": {
+            "label": "Estado *",
+            "placeholder": "e.g., Tocantins"
+          },
+          "city": {
+            "label": "Cidade *",
+            "placeholder": "e.g., Palmas"
+          }
+        }
+      },
+      "actions": {
+        "next": "Próximo"
+      }
+    },
+    "step2": {
+      "question": "Qual perfil melhor descreve você?",
+      "roles": {
+        "design": "Designer",
+        "developer": "Desenvolvedor(a)",
+        "entrepreneur": "Empresário(a)",
+        "architect": "Arquiteto(a)",
+        "influencer": "Influencer",
+        "other": "Outro"
+      },
+      "actions": {
+        "back": "Voltar",
+        "submit": "Concluir"
+      }
+    }
+  },
+  "profile": {
+    "pageTitle": "Perfil do Usuário",
+    "logout": {
+      "button": "Sair",
+      "errorTitle": "Falha!",
+      "errorDescription": "Falha ao realizar o logout, entre em contato com o suporte"
+    },
+    "avatar": {
+      "uploadButton": "Enviar nova foto"
+    },
+    "aboutMe": {
+      "title": "Sobre Mim",
+      "nameLabel": "Nome",
+      "bioLabel": "Biografia"
+    },
+    "socialLinks": {
+      "title": "Redes Sociais",
+      "empty": "Nenhum link social adicionado.",
+      "selectPlaceholder": "Selecione o ícone",
+      "urlPlaceholder": "URL",
+      "addButton": "Adicionar Link",
+      "removeButton": "Remover link",
+      "invalidUrlTitle": "URL inválida",
+      "invalidUrlDescription": "Por favor, insira uma URL válida."
+    },
+    "tags": {
+      "title": "Tags",
+      "description": "Adicione tags para mostrar seus interesses e habilidades.",
+      "emptyCategory": "Nenhuma tag de",
+      "addedYet": "adicionada ainda.",
+      "inputPlaceholder": "Adicionar tag de",
+      "addButton": "Adicionar",
+      "removeAriaLabel": "Remover"
+    },
+    "saveButton": {
+      "default": "Salvar Alterações",
+      "saving": "Salvando...",
+      "successTitle": "Perfil salvo",
+      "successDescription": "Seus dados foram atualizados.",
+      "errorTitle": "Erro",
+      "errorDescription": "Não foi possível salvar."
+    }
+  },
+  "settings": {
+    "almostThere": "Quase lá!",
+    "sendLink": "Enviamos um link de verificação para o novo e-mail. Verifique sua caixa de entrada.",
+    "currentPlan": "Plano atual",
+    "signPremium": "Assinar Premium",
+    "paymentMethods": "Métodos de pagamento",
+    "expires": "Expira em",
+    "primary": "Primário",
+    "setPrimary": "Definir primário",
+    "deleteCard": "Excluir Cartão",
+    "noPaymentMethodsSaved": "Sem métodos de pagamento salvo",
+    "paymentHistory": "Histórico de pagamentos",
+    "basicFeatures": "Funcionalidades básicas para começar.",
+    "limitedFreatures": "Todas as funcionalidades disponíveis, menos criar e gerenciar projetos.",
+    "allFeatures": "Desbloqueie todo o potencial",
+    "monthly": "Mensal",
+    "/monthly": "/mês",
+    "annualy": "Anual",
+    "/annualy": "/ano",
+    "twoYears": "2 anos",
+    "/twoYears": "/2 anos",
+    "completedAcess": "Acesso completo a todas as funcionalidades, incluindo criação e gerenciamento ilimitado de projetos.",
+    "freeFeatures": {
+      "f1": "Funcionalidades básicas",
+      "f2": "Gerenciamento limitado"
+    },
+    "premiumFeatures": {
+      "f1": "Todas as funcionalidades",
+      "f2": "Gerenciamento completo",
+      "f3": "Suporte prioritário"
+    },
+    "title": "Configurações",
+    "tabs": {
+      "account": "Conta",
+      "billing": "Plano e Cobrança",
+      "options": "Opções",
+      "notifications": "Notificações",
+      "appearance": "Aparência"
+    },
+    "account": {
+      "title": "Conta",
+      "description": "Gerencie os detalhes da sua conta, como nome, e-mail e senha.",
+      "fields": {
+        "name": "Nome",
+        "namePlaceholder": "Seu nome",
+        "email": "E-mail",
+        "emailPlaceholder": "seu.email@exemplo.com",
+        "username": "Nome de usuário",
+        "usernamePlaceholder": "seu_username",
+        "usernameError": "Nome de usuário indisponível.",
+        "address": "Endereço (Opcional)",
+        "country": "País",
+        "state": "Estado/Província",
+        "city": "Cidade",
+        "neighborhood": "Bairro/Distrito",
+        "street": "Endereço"
+      },
+      "actions": {
+        "changePassword": "Alterar Senha",
+        "save": {
+          "default": "Salvar Alterações da Conta",
+          "saving": "Salvando...",
+          "confirmPassword": "Confirmar e salvar"
+        },
+        "success": {
+          "title": "Configurações Salvas",
+          "description": "Seus dados foram atualizados com sucesso."
+        },
+        "error": {
+          "title": "Falha ao Salvar",
+          "description": "Não foi possível atualizar seus dados."
+        }
+      },
+      "preferences": {
+        "saveSuccess": {
+          "title": "Preferências Salvas",
+          "descriptionLanguage": "Idioma definido como",
+          "descriptionCurrency": "moeda definida como"
+        },
+        "saveError": {
+          "title": "Erro",
+          "description": "Erro ao salvar suas preferências."
+        },
+        "notifications": {
+          "saveSuccess": {
+            "title": "Preferências de Notificação Salvas",
+            "description": "Configurações de notificação por e-mail atualizadas"
+          },
+          "planFree": {
+            "title": "Plano Mantido",
+            "description": "Você já está no plano Free."
+          },
+          "planPremium": {
+            "title": "Upgrade para Premium",
+            "description": "Redirecionando para pagamento"
+          },
+          "primaryCardSet": {
+            "title": "Cartão Principal Definido",
+            "description": "Cartão com final",
+            "description2": "agora é o principal."
+          },
+          "cannotDeletePrimary": {
+            "title": "Não é possível excluir o principal",
+            "description": "Defina outro cartão como principal antes de excluí-lo."
+          },
+          "cardDeleted": {
+            "title": "Cartão Excluído",
+            "description": "Cartão com final",
+            "description2": "foi excluído."
+          },
+          "paymentMethodAdded": {
+            "title": "Método de Pagamento Adicionado",
+            "description": "Cartão com final",
+            "description2": "foi adicionado."
+          }
+        }
+      }
+    },
+    "billingHistory": {
+      "description": "Veja seus extratos de cobrança anteriores.",
+      "headers": {
+        "date": "Data",
+        "amount": "Valor",
+        "card": "Cartão",
+        "paymentId": "ID do Pagamento",
+        "status": "Status"
+      },
+      "empty": "Nenhum histórico de pagamento encontrado."
+    },
+    "options": {
+      "title": "Opções",
+      "description": "Personalize preferências do sistema como idioma.",
+      "language": {
+        "label": "Idioma",
+        "placeholder": "Selecione o idioma..."
+      },
+      "currency": {
+        "label": "Moeda/Câmbio",
+        "placeholder": "Selecione a moeda..."
+      },
+      "saveButton": {
+        "default": "Salvar Preferências",
+        "loading": "Salvando..."
+      }
+    },
+    "notifications": {
+      "title": "Notificações por E-mail",
+      "description": "Configure suas preferências de notificação por e-mail.",
+      "items": {
+        "invite": {
+          "invite": "Convites para Projetos",
+          "description": "Notifique-me quando alguém me convidar para um projeto."
+        },
+        "change": {
+          "title": "Alterações em Projetos",
+          "description": "Notifique-me quando um projeto do qual faço parte for atualizado."
+        },
+        "comment": {
+          "title": "Novos Comentários/Menções",
+          "description": "Notifique-me sobre novos comentários ou quando eu for mencionado(a)."
+        },
+        "status": {
+          "title": "Mudança de Status do Comentário",
+          "description": "Notifique-me quando o status de um comentário que acompanho mudar."
+        },
+        "marketing": {
+          "title": "E-mails de Marketing",
+          "description": "Receba e-mails sobre novidades, funcionalidades e ofertas."
+        }
+      },
+      "saveButton": {
+        "default": "Salvar Preferências de Notificação",
+        "loading": "Salvando..."
+      }
+    },
+    "appearance": {
+      "title": "Aparência",
+      "description": "Personalize o visual e a experiência.",
+      "theme": "Tema"
+    },
+    "addPaymentMethodDialog": {
+      "triggerButton": "Adicionar Método",
+      "title": "Adicionar Novo Método de Pagamento",
+      "description": "Insira os dados do seu cartão abaixo. Suas informações estão seguras.",
+      "fields": {
+        "cardName": {
+          "label": "Nome no Cartão",
+          "placeholder": "JOÃO DA SILVA"
+        },
+        "cardNumber": {
+          "label": "Número do Cartão"
+        },
+        "expiryDate": {
+          "label": "Data de Validade",
+          "placeholder": "MM/AA"
+        },
+        "cvv": {
+          "label": "CVV"
+        }
+      },
+      "buttons": {
+        "cancel": "Cancelar",
+        "submit": {
+          "default": "Adicionar Cartão",
+          "loading": "Adicionando..."
+        }
+      },
+      "toast": {
+        "success": {
+          "title": "Método de Pagamento Adicionado",
+          "description": "Cartão com final",
+          "description2": "adicionado com sucesso."
+        },
+        "error": {
+          "title": "Erro ao Adicionar Cartão",
+          "description": "Não foi possível adicionar o método de pagamento. Por favor, tente novamente."
+        }
+      }
+    },
+    "change-password-dialog": {
+      "triggerButton": "Alterar Senha",
+      "title": "Alterar Senha",
+      "description": "Clique no link abaixo para redefinir sua senha. Você receberá um e-mail com instruções para criar uma nova senha. Se você não receber o e-mail,",
+      "sendLinkButton": {
+        "default": "Esqueceu? Enviar link de redefinição",
+        "loading": "Enviando..."
+      },
+      "closeButton": "Fechar",
+      "toasts": {
+        "notAuthenticated": {
+          "title": "Erro!",
+          "description": "Usuário não autenticado."
+        },
+        "resetSent": {
+          "title": "Redefinição de senha enviada!",
+          "description": "Verifique sua caixa de entrada!"
+        },
+        "resetFailed": {
+          "title": "Erro",
+          "description": "Não foi possível enviar o e-mail de redefinição de senha. Por favor, tente novamente."
+        }
+      }
+    },
+    "recentlyAdd": {
+      "failToLoad": "Falha ao carregar o histórico",
+      "failToLoadMethods": "Falha ao carregar os métodos de pagamento",
+      "preferencesSave": "Preferências salvas com sucesso",
+      "errorToSavePreferences": "Erro ao salvar preferências.",
+      "userNotAuth": "Usuário não autenticado",
+      "error": "Erro",
+      "NotPossibleToMigrate": "Não foi possível migrar para Free",
+      "planNotValid": "Plano inválido",
+      "planNotValidDescription": "Selecione uma frequência válida.",
+      "premiumPlanSelected": "Plano Premium selecionado",
+      "premiumPlanSelectedDescription": "Você está sendo redirecionado para o checkout.",
+      "checkoutError": "Erro no Checkout",
+      "checkoutErrorDescription": "Tente novamente mais tarde."
+    }
+  },
+  "tags": {
+    "page": {
+      "title": "Tags",
+      "card": {
+        "title": "Gerenciar Tags",
+        "description": "Crie, edite e exclua tags usadas em seus projetos e comentários.",
+        "emptyState": "Você ainda não criou nenhuma tag.",
+        "noDescription": "Sem descrição"
+      },
+      "buttons": {
+        "edit": "Editar Tag",
+        "delete": "Excluir Tag"
+      },
+      "toast": {
+        "error": {
+          "title": "Erro ao Carregar Tags",
+          "description": "Não foi possível carregar as tags. Por favor, tente novamente."
+        }
+      }
+    },
+    "add-tag-dialog": {
+      "triggerButton": "Adicionar Tag",
+      "title": "Adicionar Nova Tag",
+      "description": "Defina um nome, descrição (opcional) e cor para sua nova tag."
+    },
+    "form": {
+      "labels": {
+        "name": "Nome da Tag *",
+        "description": "Descrição (Opcional)",
+        "color": "Cor *"
+      },
+      "placeholders": {
+        "name": "ex.: Urgente, Backend",
+        "description": "Descreva brevemente o propósito da tag..."
+      },
+      "errors": {
+        "unauthenticated": {
+          "title": "Erro",
+          "description": "Usuário não autenticado."
+        },
+        "create": {
+          "title": "Erro ao Adicionar Tag",
+          "description": "Não foi possível adicionar a tag. Por favor, tente novamente."
+        }
+      },
+      "success": {
+        "title": "Tag Criada",
+        "description": "Tag",
+        "description2": "adicionada com sucesso."
+      },
+      "buttons": {
+        "cancel": "Cancelar",
+        "submit": {
+          "default": "Adicionar Tag",
+          "loading": "Adicionando..."
+        }
+      }
+    },
+    "delete-confirmation-dialog": {
+      "dialog": {
+        "title": "Você tem certeza absoluta?",
+        "description": "Essa ação não pode ser desfeita. Isso excluirá permanentemente a tag",
+        "description2": "Excluir uma tag pode afetar projetos ou comentários que a utilizam.",
+        "buttons": {
+          "cancel": "Cancelar",
+          "confirm": {
+            "default": "Excluir Tag",
+            "loading": "Excluindo..."
+          }
+        },
+        "toast": {
+          "success": {
+            "title": "Tag Excluída",
+            "description": "Tag excluída com sucesso"
+          },
+          "error": {
+            "title": "Erro ao Excluir Tag",
+            "description": "Não foi possível excluir a tag. Por favor, tente novamente."
+          }
+        }
+      }
+    }
+  },
+  "sidebar": {
+    "dashboard": "Dashboard",
+    "MyProjects": "Meus Projetos",
+    "shared-with-me": "Compartilhados",
+    "collaborators": "Colaboradores",
+    "comments": "Comentários",
+    "tags": "Tags",
+    "settings": "Configurações"
+  },
+  "terms-condition": {
+    "lastUpdateLabel": "Última atualização: ",
+    "welcomeTitle": "Seja bem-vindo ao Projectude!",
+    "introText": "Ao acessar e utilizar a plataforma Projectude (www.projectude.com), você concorda com os termos e condições descritos abaixo. Caso não concorde com estes termos, recomendamos que não utilize os nossos serviços.",
+
+    "section1Title": "1. Objetivo da Plataforma",
+    "section1Text": "O Projectude é uma ferramenta online de gerenciamento de projetos, colaboração em equipe e organização de tarefas, voltada para usuários individuais e equipes profissionais. A plataforma oferece funcionalidades como:",
+    "section1Item1": "Criação e gestão de projetos",
+    "section1Item2": "Atribuição de colaboradores",
+    "section1Item3": "Organização por tags",
+    "section1Item4": "Comentários com atribuições",
+    "section1Item5": "Central de ajuda integrada",
+    "section1Item6": "Dashboards informativos e gráficos",
+    "section1Item7": "Planos gratuitos e pagos",
+
+    "section2Title": "2. Cadastro e Conta do Usuário",
+    "section2Text1": "Para utilizar a plataforma, o usuário deve criar uma conta fornecendo dados verdadeiros e atualizados. O usuário é responsável por manter a confidencialidade de suas credenciais de acesso e por todas as atividades realizadas em sua conta.",
+    "section2Text2": "É proibido:",
+    "section2Item1": "Utilizar dados falsos ou de terceiros;",
+    "section2Item2": "Compartilhar login e senha com outras pessoas;",
+    "section2Item3": "Utilizar a conta para fins ilícitos ou não autorizados.",
+
+    "section3Title": "3. Planos e Pagamentos",
+    "section3Text1": "O Projectude oferece dois tipos de plano:",
+    "section3Item1": "Plano Free: Acesso gratuito com funcionalidades limitadas.",
+    "section3Item2": "Plano Premium: Acesso completo mediante pagamento mensal, anual ou bianual. Os valores variam conforme a localização do usuário (R$, US$, €), com cobrança automática recorrente, conforme escolhido.",
+    "section3Text2": "Todos os valores e planos são exibidos de forma adaptada à localização geográfica do usuário, conforme detecção automática. A moeda e os valores exibidos não podem ser alterados manualmente.",
+    "section3Text3": "Cancelamentos podem ser realizados a qualquer momento, e o acesso ao plano Premium permanece ativo até o fim do período pago.",
+
+    "section4Title": "4. Responsabilidades do Usuário",
+    "section4Text1": "O usuário é responsável por todo o conteúdo inserido, incluindo:",
+    "section4Item1": "Dados de projetos",
+    "section4Item2": "Comentários",
+    "section4Item3": "Arquivos anexos",
+    "section4Item4": "Informações de colaboradores",
+    "section4Text2": "A Projectude não se responsabiliza por dados perdidos ou compartilhados incorretamente entre usuários.",
+
+    "section5Title": "5. Uso Indevido e Suspensão",
+    "section5Text": "Reservamo-nos o direito de suspender ou encerrar contas que violem estes termos ou que utilizem a plataforma de forma abusiva, fraudulenta ou que coloque em risco a integridade do sistema ou de outros usuários.",
+
+    "section6Title": "6. Privacidade e Dados",
+    "section6Text": "O uso da plataforma está sujeito à nossa Política de Privacidade, que descreve como os dados são coletados, armazenados e utilizados. O usuário concorda com o tratamento de seus dados conforme essa política.",
+
+    "section7Title": "7. Propriedade Intelectual",
+    "section7Text": "Todo o conteúdo da plataforma, incluindo textos, layout, design, funcionalidades, logotipo e marca Projectude, são protegidos por direitos autorais e não podem ser copiados, reproduzidos ou utilizados sem autorização expressa.",
+
+    "section8Title": "8. Modificações",
+    "section8Text": "A Projectude pode, a qualquer momento, modificar estes Termos de Uso. Os usuários serão notificados por e-mail ou via notificação na plataforma. O uso contínuo do serviço após a atualização implica na aceitação dos novos termos.",
+
+    "section9Title": "9. Suporte e Contato",
+    "section9Text": "Para dúvidas, suporte técnico ou sugestões, o usuário pode acessar a Central de Ajuda da plataforma ou entrar em contato através do e-mail: help@projectude.com",
+
+    "section10Title": "10. Foro",
+    "section10Text": "Estes termos são regidos pelas leis do Brasil. Fica eleito o foro da comarca de Palmas/TO para dirimir quaisquer controvérsias oriundas deste contrato."
+  },
+  "cookies-policy": {
+    "lastUpdateLabel": "Última atualização: ",
+
+    "title": "Política de Cookies da Projectude",
+    "intro": "Esta Política de Cookies explica como a Plataforma Projectude utiliza cookies e tecnologias semelhantes para reconhecer você quando visita nosso site (www.projectude.com). Ela detalha o que são cookies, por que os usamos e como você pode controlá-los.",
+
+    "section1Title": "O que são Cookies?",
+    "section1Text": "Cookies são pequenos arquivos de texto armazenados em seu navegador ou dispositivo quando você visita um site. Eles servem para reconhecer suas preferências, melhorar sua experiência de navegação e coletar informações analíticas.",
+
+    "section2Title": "Tipos de Cookies que Utilizamos",
+
+    "strictlyNecessaryTitle": "Cookies Estritamente Necessários",
+    "strictlyNecessaryText": "Esses cookies são essenciais para o funcionamento da plataforma e não podem ser desativados. São usados, por exemplo, para:",
+    "strictlyNecessaryItem1": "Manter você logado na sua conta",
+    "strictlyNecessaryItem2": "Gerenciar sessões seguras",
+    "strictlyNecessaryItem3": "Salvar preferências de idioma ou tema (claro/escuro)",
+
+    "performanceTitle": "Cookies de Desempenho e Análise",
+    "performanceText": "Nos ajudam a entender como os usuários interagem com a Projectude, permitindo:",
+    "performanceItem1": "Medir número de acessos e comportamento de navegação",
+    "performanceItem2": "Melhorar o desempenho e usabilidade da interface",
+    "performanceExample": "Exemplo: usamos ferramentas como Google Analytics com anonimização de IP.",
+
+    "functionalityTitle": "Cookies de Funcionalidade",
+    "functionalityText": "Permitem que a plataforma lembre de suas escolhas para personalizar sua experiência, como:",
+    "functionalityItem1": "Modo escuro ativado",
+    "functionalityItem2": "Filtros salvos em listagens de projetos",
+    "functionalityItem3": "Preferências de exibição no painel",
+
+    "marketingTitle": "Cookies de Marketing (opcional)",
+    "marketingText": "Poderemos usar cookies para:",
+    "marketingItem1": "Exibir comunicações personalizadas sobre atualizações ou planos",
+    "marketingItem2": "Mensurar interações com campanhas promocionais (com seu consentimento)",
+
+    "managementTitle": "Gerenciamento de Cookies",
+    "managementText": "Você pode controlar e/ou excluir cookies a qualquer momento. Para isso:",
+    "managementItem1": "Configurações do Navegador: Ajuste as permissões de cookies, bloqueie ou apague cookies salvos.",
+    "managementItem2": "Banner de Consentimento: Ao acessar a plataforma pela primeira vez, você poderá aceitar ou recusar categorias de cookies (exceto os essenciais).",
+    "managementItem3": "Botão “Gerenciar Cookies”: Disponível no rodapé da plataforma para alterar preferências a qualquer momento.",
+
+    "thirdPartyTitle": "Cookies de Terceiros",
+    "thirdPartyText": "Podemos utilizar cookies de serviços terceiros (ex: Stripe, Firebase, Google) para autenticação, pagamentos ou análises. Esses cookies estão sujeitos às respectivas políticas de privacidade desses fornecedores.",
+
+    "changesTitle": "Alterações nesta Política",
+    "changesText": "Esta Política de Cookies pode ser modificada periodicamente para refletir mudanças na legislação ou na própria plataforma. A versão atualizada será sempre publicada em: www.projectude.com/cookies",
+
+    "contactTitle": "Contato",
+    "contactText": "Caso tenha dúvidas ou solicitações sobre o uso de cookies, entre em contato com nossa equipe:",
+    "contactEmail": "📧 help@projectude.com",
+
+    "consentText": "Ao continuar a usar a Projectude após visualizar o aviso de cookies, você concorda com o uso conforme descrito nesta política."
+  },
+  "privacy-police": {
+    "lastUpdateLabel": "Última atualização: ",
+
+    "title": "Política de Privacidade da Plataforma Projectude",
+    "intro": "A sua privacidade é importante para nós. Esta Política de Privacidade descreve como coletamos, usamos, armazenamos e protegemos os seus dados pessoais quando você utiliza a plataforma Projectude, acessível em www.projectude.com.",
+
+    "section1Title": "1. Informações que Coletamos",
+    "section1Text": "Ao utilizar a Projectude, podemos coletar os seguintes dados:",
+    "section1_1Title": "1.1. Dados Cadastrais",
+    "section1_1Item1": "Nome",
+    "section1_1Item2": "E-mail",
+    "section1_1Item3": "Senha (criptografada)",
+    "section1_1Item4": "Foto de perfil",
+    "section1_1Item5": "Informações profissionais e biográficas (opcional)",
+    "section1_1Item6": "Informações de pagamento (cartão de crédito)",
+
+    "section1_2Title": "1.2. Dados de Uso",
+    "section1_2Item1": "Ações realizadas na plataforma (ex: criação de projetos, comentários, convites)",
+    "section1_2Item2": "Endereço IP, tipo de navegador e dispositivo",
+    "section1_2Item3": "Data e hora de acesso",
+    "section1_2Item4": "Preferência de idioma e modo de exibição (claro/escuro)",
+
+    "section1_3Title": "1.3. Dados Compartilhados",
+    "section1_3Item1": "Projetos e credenciais inseridos pelos usuários",
+    "section1_3Item2": "Arquivos anexados (máximo 3 por projeto)",
+    "section1_3Item3": "Colaboradores adicionados aos projetos",
+
+    "section2Title": "2. Finalidade do Uso dos Dados",
+    "section2Text": "Usamos seus dados para:",
+    "section2Item1": "Permitir o funcionamento completo da plataforma",
+    "section2Item2": "Facilitar a colaboração entre usuários",
+    "section2Item3": "Enviar notificações e atualizações",
+    "section2Item4": "Processar pagamentos de planos",
+    "section2Item5": "Fornecer suporte técnico",
+    "section2Item6": "Melhorar a experiência do usuário (análises internas)",
+
+    "section3Title": "3. Compartilhamento de Dados",
+    "section3Text": "Seus dados não são vendidos a terceiros. Podemos compartilhar informações:",
+    "section3Item1": "Com prestadores de serviços de pagamento (ex: gateways de cartão de crédito)",
+    "section3Item2": "Para cumprir obrigações legais, judiciais ou regulatórias",
+    "section3Item3": "Com colaboradores autorizados nos projetos em que você participa",
+
+    "section4Title": "4. Armazenamento e Segurança",
+    "section4Text": "Adotamos medidas técnicas e organizacionais para proteger seus dados contra acessos não autorizados, uso indevido, alteração ou destruição.",
+    "section4Item1": "Armazenamento em servidores seguros",
+    "section4Item2": "Criptografia de senhas",
+    "section4Item3": "Acesso controlado aos dados por parte da equipe técnica",
+
+    "section5Title": "5. Retenção de Dados",
+    "section5Text": "Seus dados serão mantidos enquanto sua conta estiver ativa ou enquanto forem necessários para cumprir as finalidades descritas. Você pode solicitar a exclusão de sua conta e dados a qualquer momento.",
+
+    "section6Title": "6. Seus Direitos",
+    "section6Text": "Você tem o direito de:",
+    "section6Item1": "Acessar os dados que temos sobre você",
+    "section6Item2": "Corrigir dados imprecisos ou desatualizados",
+    "section6Item3": "Solicitar a exclusão de seus dados",
+    "section6Item4": "Retirar seu consentimento, quando aplicável",
+    "section6Note": "Solicitações devem ser feitas via e-mail: help@projectude.com",
+
+    "section7Title": "7. Cookies",
+    "section7Text": "Utilizamos cookies e tecnologias semelhantes para:",
+    "section7Item1": "Lembrar suas preferências",
+    "section7Item2": "Melhorar a navegação",
+    "section7Item3": "Realizar análises de uso",
+    "section7Note": "Você pode controlar o uso de cookies nas configurações do seu navegador.",
+
+    "section8Title": "8. Alterações nesta Política",
+    "section8Text": "Esta política pode ser atualizada periodicamente. Notificaremos os usuários via Central de Ajuda ou e-mail. Recomendamos que você revise esta página regularmente.",
+
+    "section9Title": "9. Contato",
+    "section9Text": "Em caso de dúvidas sobre esta Política de Privacidade, entre em contato conosco:",
+    "section9Email": "📧 E-mail: help@projectude.com",
+    "section9Site": "🌐 Site: www.projectude.com",
+
+    "finalConsent": "Ao utilizar a Projectude, você declara estar de acordo com esta Política de Privacidade."
+  }
+}

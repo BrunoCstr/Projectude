@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  /* Defaulting to sans-serif as Geist fonts were removed */
+  font-family: sans-serif;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 240 10% 3.9%; /* Near Black */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 240 10% 3.9%; /* Near Black */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 240 10% 3.9%; /* Near Black */
+
+    --primary: 180 82% 44%; /* #14cdcd */
+    --primary-foreground: 180 82% 95%; /* Lighter cyan for contrast */
+
+    /* Updated Light Theme Grays */
+    --secondary: 240 4.8% 97%; /* Lighter Gray */
+    --secondary-foreground: 240 5.9% 10%; /* Dark Gray */
+
+    --muted: 240 4.8% 97%; /* Lighter Gray (same as secondary for consistency) */
+    --muted-foreground: 240 3.8% 46.1%; /* Medium Gray */
+
+    --accent: 16 100% 66%; /* #FF7F50 */
+    --accent-foreground: 16 100% 5%; /* Dark brown/black for contrast */
+
+    --destructive: 0 84.2% 60.2%; /* Red */
+    --destructive-foreground: 0 0% 98%; /* White */
+
+    --border: 240 5.9% 93%; /* Slightly darker than muted/secondary */
+    --input: 240 5.9% 93%; /* Same as border */
+    --ring: 180 82% 44%; /* Primary color for rings */
+
+    --radius: 0.5rem; /* Default border radius */
+
+    --chart-1: 180 82% 44%; /* Primary */
+    --chart-2: 16 100% 66%; /* Accent */
+    --chart-3: 240 5.9% 10%; /* Secondary Foreground */
+    --chart-4: 180 82% 64%; /* Lighter Primary */
+    --chart-5: 16 100% 86%; /* Lighter Accent */
+
+    /* Sidebar Specific Colors */
+    --sidebar-background: 240 10% 3.9%; /* Dark background for sidebar */
+    --sidebar-foreground: 0 0% 98%; /* White/Light text for sidebar */
+    --sidebar-primary: 180 82% 44%; /* Use primary for sidebar primary elements */
+    --sidebar-primary-foreground: 180 82% 95%; /* Lighter cyan for contrast */
+    --sidebar-accent: 180 82% 44%; /* Use Primary color for hover/active background */
+    --sidebar-accent-foreground: 180 82% 95%; /* Use Primary foreground for text */
+    --sidebar-border: 240 3.7% 15.9%; /* Dark border for sidebar */
+    --sidebar-ring: 180 82% 44%; /* Primary color for rings */
+  }
+
+  .dark {
+    /* Softer Dark Theme */
+    --background: 20 5% 12%; /* #211f1e - Dark brown/gray */
+    --foreground: 0 0% 95%; /* Light Gray */
+
+    --card: 20 5% 14%; /* Slightly lighter brown/gray */
+    --card-foreground: 0 0% 95%; /* Light Gray */
+
+    --popover: 20 5% 10%; /* Slightly darker popover */
+    --popover-foreground: 0 0% 95%; /* Light Gray */
+
+    --primary: 180 82% 54%; /* Slightly lighter Primary for dark mode */
+    --primary-foreground: 180 82% 10%; /* Darker cyan for contrast */
+
+    --secondary: 20 5% 20%; /* Darker Brown/Gray */
+    --secondary-foreground: 0 0% 90%; /* Slightly muted light gray */
+
+    --muted: 20 5% 17%; /* Darker Brown/Gray */
+    --muted-foreground: 240 4% 60%; /* Lighter Gray */
+
+    --accent: 16 100% 70%; /* Slightly lighter Accent for dark mode */
+    --accent-foreground: 16 100% 8%; /* Darker brown/black for contrast */
+
+    --destructive: 0 70% 50%; /* Slightly less intense Red */
+    --destructive-foreground: 0 0% 98%; /* White */
+
+    --border: 20 5% 22%; /* Slightly lighter border matching background tone */
+    --input: 20 5% 20%; /* Same as secondary */
+    --ring: 180 82% 54%; /* Slightly lighter Primary for rings */
+
+    --chart-1: 180 82% 54%;
+    --chart-2: 16 100% 70%;
+    --chart-3: 0 0% 95%;
+    --chart-4: 180 82% 64%;
+    --chart-5: 16 100% 80%;
+
+    /* Sidebar Specific Colors (Dark Mode) - Updated background and accent */
+    --sidebar-background: 20 5% 12%; /* #211f1e - Dark brown/gray */
+    --sidebar-foreground: 0 0% 98%; /* White/Light text for sidebar */
+    --sidebar-primary: 180 82% 54%; /* Use dark mode primary */
+    --sidebar-primary-foreground: 180 82% 10%; /* Darker cyan for contrast */
+    --sidebar-accent: 180 82% 54%; /* Use Dark Mode Primary color for hover/active background */
+    --sidebar-accent-foreground: 180 82% 10%; /* Use Dark Mode Primary foreground for text contrast */
+    --sidebar-border: 20 5% 18%; /* Slightly lighter border matching background tone */
+    --sidebar-ring: 180 82% 54%; /* Use dark mode primary for rings */
+  }
+
+  /* New Cafe Theme */
+  .theme-cafe {
+    --background: 25 30% 95%; /* Very light beige/off-white */
+    --foreground: 25 30% 15%; /* Dark Brown */
+
+    --card: 30 50% 98%; /* Slightly warmer white */
+    --card-foreground: 25 30% 15%; /* Dark Brown */
+
+    --popover: 30 50% 99%; /* Almost white */
+    --popover-foreground: 25 30% 15%; /* Dark Brown */
+
+    --primary: 30 60% 50%; /* Medium-dark Warm Brown (Coffee bean) */
+    --primary-foreground: 35 40% 95%; /* Creamy White */
+
+    --secondary: 30 40% 88%; /* Light Latte Brown */
+    --secondary-foreground: 30 60% 40%; /* Darker Medium Brown */
+
+    --muted: 30 30% 92%; /* Very Light Latte/Beige */
+    --muted-foreground: 30 25% 50%; /* Desaturated Medium Brown */
+
+    --accent: 20 75% 65%; /* Warm Caramel/Orange */
+    --accent-foreground: 20 75% 10%; /* Darkest Brown/Black */
+
+    --destructive: 0 60% 50%; /* Deep Red/Burgundy */
+    --destructive-foreground: 0 0% 98%; /* Cream/White */
+
+    --border: 30 30% 85%; /* Light Brown Border */
+    --input: 30 30% 90%; /* Light Beige Input Background */
+    --ring: 30 60% 50%; /* Primary Brown Ring */
+
+    /* Adjust radius if desired for this theme */
+    /* --radius: 0.3rem; */
+
+    --chart-1: 30 60% 50%; /* Primary */
+    --chart-2: 20 75% 65%; /* Accent */
+    --chart-3: 25 30% 15%; /* Foreground */
+    --chart-4: 30 40% 70%; /* Lighter Primary */
+    --chart-5: 20 75% 80%; /* Lighter Accent */
+
+    /* Sidebar Specific Colors (Cafe Theme) - Updated Accent */
+    --sidebar-background: 25 30% 15%; /* Dark Brown */
+    --sidebar-foreground: 35 40% 90%; /* Light Beige */
+    --sidebar-primary: 30 60% 50%; /* Use theme primary */
+    --sidebar-primary-foreground: 35 40% 95%; /* Use theme primary foreground */
+    --sidebar-accent: 30 60% 50%; /* Use theme primary for hover/active background */
+    --sidebar-accent-foreground: 35 40% 95%; /* Use theme primary foreground for text contrast */
+    --sidebar-border: 25 30% 25%; /* Darker brown border */
+    --sidebar-ring: 30 60% 50%; /* Use theme primary for rings */
+  }
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}

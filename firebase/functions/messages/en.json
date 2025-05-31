@@ -1,0 +1,50 @@
+{
+  "cloudFunctionsNotifications": {
+    "message1": "invited you to collaborate.",
+    "message2": {
+      "user": "User",
+      "desactive": "disable notifications like",
+      "notSend": "It will not be sent."
+    },
+    "message3": {
+      "beforeSnap": "Comment",
+      "deleted": "deleted. Handling potential notifications (optional)."
+    },
+    "message4": {
+      "assigned": "assigned a new comment to you in"
+    },
+    "message5": {
+      "statusChanged": "Status of comment",
+      "inProject": "in",
+      "changedTo": "changed to"
+    },
+    "message6": {
+      "edited": "edited a comment assigned to you in"
+    },
+    "message7": {
+      "assignedYou": "assigned you to a comment in"
+    },
+    "message8": {
+      "replySnapshotNotFound": "Reply snapshot not found for comment"
+    },
+    "message9": {
+      "replyDataMissing": "Reply data is missing for:"
+    },
+    "message10": {
+      "parentCommentNotFound": "Parent comment not found for reply"
+    },
+    "message11": {
+      "parentCommentDataMissing": "Parent comment data missing for"
+    },
+    "message12": {
+      "replied": "replied to a comment in"
+    },
+    "message13": {
+      "statusUpdated": "The status of project",
+      "updatedTo": "was updated to"
+    },
+    "message14": {
+      "addedAsCollaborator": "You were added as a collaborator to the project"
+    }
+  }
+}

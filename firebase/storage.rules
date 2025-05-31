@@ -1,0 +1,109 @@
+
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // --- User Avatars ---
+    // Path: /user_avatars/{userId}/avatar.[ext]
+    match /user_avatars/{userId}/{fileName} {
+      // Allow read by anyone (public avatars)
+      allow read: if true;
+      // Allow write only by the authenticated user for their own avatar
+      allow write: if request.auth != null && request.auth.uid == userId &&
+                    fileName == 'avatar' && // Enforce filename for simplicity, or check extension
+                    request.resource.size < 5 * 1024 * 1024 && // Max 5MB
+                    request.resource.contentType.matches('image/.*'); // Allow only images
+    }
+
+    // --- Project Logos ---
+    // Path: /project_logos/{projectId}/logo.[ext]
+    match /project_logos/{projectId}/{fileName} {
+      // Allow read by anyone (public logos)
+      allow read: if true;
+      // Allow write only by the project owner
+      // Requires fetching project data - might be complex/costly in rules, consider Cloud Function validation
+      // Simple rule: Allow if authenticated user and filename is 'logo'
+      allow write: if request.auth != null &&
+                    fileName == 'logo' && // Enforce filename
+                    request.resource.size < 2 * 1024 * 1024 && // Max 2MB
+                    request.resource.contentType.matches('image/.*');
+      // More secure rule (using Firestore lookup - use with caution due to reads):
+      // allow write: if request.auth != null &&
+      //               exists(/databases/(default)/documents/projects/$(projectId)) &&
+      //               get(/databases/(default)/documents/projects/$(projectId)).data.ownerId == request.auth.uid &&
+      //               fileName == 'logo' &&
+      //               request.resource.size < 2 * 1024 * 1024 &&
+      //               request.resource.contentType.matches('image/.*');
+    }
+
+    // --- Project Covers ---
+    // Path: /project_covers/{projectId}/cover.[ext]
+     match /project_covers/{projectId}/{fileName} {
+      // Allow read by anyone
+      allow read: if true;
+      // Allow write only by the project owner (similar logic as logos)
+      allow write: if request.auth != null &&
+                    fileName == 'cover' && // Enforce filename
+                    request.resource.size < 10 * 1024 * 1024 && // Max 10MB
+                    request.resource.contentType.matches('image/.*');
+      // More secure rule (using Firestore lookup):
+      // allow write: if request.auth != null &&
+      //               exists(/databases/(default)/documents/projects/$(projectId)) &&
+      //               get(/databases/(default)/documents/projects/$(projectId)).data.ownerId == request.auth.uid &&
+      //               fileName == 'cover' &&
+      //               request.resource.size < 10 * 1024 * 1024 &&
+      //               request.resource.contentType.matches('image/.*');
+    }
+
+    // --- Project Attachments ---
+    // Path: /project_attachments/{projectId}/{attachmentId}/{fileName}
+    match /project_attachments/{projectId}/{attachmentId}/{fileName} {
+       // Allow read only by users who have access to the project (owner or collaborator)
+       // Requires Firestore lookup - use with caution
+       allow read: if request.auth != null &&
+                    exists(/databases/(default)/documents/projects/$(projectId)) &&
+                    (get(/databases/(default)/documents/projects/$(projectId)).data.ownerId == request.auth.uid ||
+                     request.auth.uid in get(/databases/(default)/documents/projects/$(projectId)).data.collaboratorIds);
+
+       // Allow write only by users who have access to the project
+       // Also check file size and potentially type
+       allow write: if request.auth != null &&
+                     exists(/databases/(default)/documents/projects/$(projectId)) &&
+                     (get(/databases/(default)/documents/projects/$(projectId)).data.ownerId == request.auth.uid ||
+                      request.auth.uid in get(/databases/(default)/documents/projects/$(projectId)).data.collaboratorIds) &&
+                     request.resource.size < 20 * 1024 * 1024; // Max 20MB per attachment (adjust as needed)
+                     // Consider adding contentType checks if necessary: request.resource.contentType.matches('application/pdf|image/.*')
+    }
+
+     // --- Comment Attachments ---
+     // Path: /comment_attachments/{commentId}/{attachmentId}/{fileName}
+     match /comment_attachments/{commentId}/{attachmentId}/{fileName} {
+       // Allow read only by users who have access to the comment (implicitly project access)
+       // This requires knowing the project ID from the comment ID, which is complex in rules.
+       // Option 1: Simpler rule - Allow read if authenticated (less secure)
+       allow read: if request.auth != null;
+       // Option 2: More complex/costly - Lookup comment, then project access (example concept)
+       // function hasProjectAccessFromComment(commentId) {
+       //   let projectId = get(/databases/(default)/documents/comments/$(commentId)).data.projectId;
+       //   let projectDoc = get(/databases/(default)/documents/projects/$(projectId)).data;
+       //   return projectDoc.ownerId == request.auth.uid || request.auth.uid in projectDoc.collaboratorIds;
+       // }
+       // allow read: if request.auth != null && hasProjectAccessFromComment(commentId);
+
+       // Allow write only by users who can read the comment (and are authenticated)
+       // Option 1: Simpler rule
+       allow write: if request.auth != null &&
+                      request.resource.size < 10 * 1024 * 1024; // Max 10MB per attachment
+       // Option 2: More secure (requires lookup function)
+       // allow write: if request.auth != null && hasProjectAccessFromComment(commentId) &&
+       //               request.resource.size < 10 * 1024 * 1024;
+     }
+
+    // --- Default Deny ---
+    // Deny all other reads/writes by default
+    match /{allPaths=**} {
+      allow read, write: if false;
+    }
+  }
+}

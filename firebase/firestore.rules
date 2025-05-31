@@ -1,0 +1,127 @@
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // --- Users Collection ---
+    match /users/{userId} {
+      // Allow users to read/write their own profile, but not delete it easily
+      allow read, update: if request.auth != null && request.auth.uid == userId;
+      // Allow create only during signup (or by admin - not implemented here)
+      allow create: if request.auth != null; // More specific rule might be needed depending on signup flow
+      // Disallow direct deletion for now
+      allow delete: if false;
+
+      // Subcollections within users (e.g., notifications, paymentHistory)
+      match /notifications/{notificationId} {
+        // Users can read/write/delete their own notifications
+        allow read, write, delete: if request.auth != null && request.auth.uid == userId;
+      }
+      match /paymentHistory/{paymentId} {
+        // Users can read their own payment history
+        allow read: if request.auth != null && request.auth.uid == userId;
+        // Creation/Update likely handled by Cloud Functions (like onPlanChange)
+        allow write: if false; // Or restrict to function calls
+      }
+      // Add rules for other user subcollections if needed
+    }
+
+    // --- Projects Collection ---
+    match /projects/{projectId} {
+      // Helper function to check if user is owner or collaborator
+      function isOwnerOrCollaborator(userId) {
+        return resource.data.ownerId == userId || (userId in resource.data.collaboratorIds);
+      }
+       // Allow read if user is owner or collaborator
+      allow read: if request.auth != null && isOwnerOrCollaborator(request.auth.uid);
+
+      // Allow create if user is authenticated (they become the owner)
+      allow create: if request.auth != null && request.resource.data.ownerId == request.auth.uid;
+
+      // Allow update if user is the owner
+      allow update: if request.auth != null && resource.data.ownerId == request.auth.uid;
+
+      // Allow delete only if user is the owner
+      allow delete: if request.auth != null && resource.data.ownerId == request.auth.uid;
+
+       // Subcollection for project-specific data (if needed)
+      // match /details/{detailId} { ... }
+    }
+
+     // --- Comments Collection ---
+    match /comments/{commentId} {
+        // Allow read if user has access to the project the comment belongs to
+        allow read: if request.auth != null && exists(/databases/$(database)/documents/projects/$(resource.data.projectId)) &&
+                     (get(/databases/$(database)/documents/projects/$(resource.data.projectId)).data.ownerId == request.auth.uid ||
+                      request.auth.uid in get(/databases/$(database)/documents/projects/$(resource.data.projectId)).data.collaboratorIds);
+
+        // Allow create if user has access to the project
+        allow create: if request.auth != null && exists(/databases/$(database)/documents/projects/$(request.resource.data.projectId)) &&
+                       (get(/databases/$(database)/documents/projects/$(request.resource.data.projectId)).data.ownerId == request.auth.uid ||
+                        request.auth.uid in get(/databases/$(database)/documents/projects/$(request.resource.data.projectId)).data.collaboratorIds) &&
+                       request.resource.data.creatorId == request.auth.uid; // Ensure creator is the authenticated user
+
+        // Allow update (e.g., status change, archiving) if user created it OR is assigned
+        // Allow editing text only by the creator
+        allow update: if request.auth != null &&
+                       ( (resource.data.creatorId == request.auth.uid) || // Creator can update anything
+                         (request.auth.uid in resource.data.assigneeIds && request.resource.data.text == resource.data.text) || // Assignee can update status/archive but not text
+                         (request.resource.data.archivedAt != resource.data.archivedAt) // Anyone with read access can archive/unarchive (adjust if needed)
+                       );
+                       // Stricter rule for text editing:
+                       // allow update: if request.auth != null &&
+                       //                ( (resource.data.creatorId == request.auth.uid && request.resource.data.keys().hasOnly(['projectId', 'text', 'assigneeIds', 'status', 'archivedAt'])) || // Creator can edit text + others
+                       //                  (request.auth.uid in resource.data.assigneeIds && request.resource.data.text == resource.data.text) ); // Assignee can edit status/archive only
+
+
+       // Allow delete only by creator (or project owner - adjust if needed)
+       allow delete: if request.auth != null && resource.data.creatorId == request.auth.uid;
+       // Or allow project owner to delete:
+       // allow delete: if request.auth != null && (resource.data.creatorId == request.auth.uid || get(/databases/$(database)/documents/projects/$(resource.data.projectId)).data.ownerId == request.auth.uid);
+
+
+       // Subcollection for Replies
+       match /replies/{replyId} {
+          // Allow read if user has read access to the parent comment (implicitly project access)
+          allow read: if request.auth != null && exists(/databases/$(database)/documents/comments/$(commentId));
+                       // Further check project access if needed based on parent comment's projectId
+
+          // Allow create if user has read access to the parent comment
+          allow create: if request.auth != null && exists(/databases/$(database)/documents/comments/$(commentId)) &&
+                         request.resource.data.userId == request.auth.uid; // Ensure creator is the authenticated user
+
+         // Allow update/delete only by the reply author
+         allow update, delete: if request.auth != null && resource.data.userId == request.auth.uid;
+       }
+    }
+
+     // --- Tags Collection ---
+     match /tags/{tagId} {
+        // Assuming tags are global or managed by admins initially
+        // Allow authenticated users to read tags
+        allow read: if request.auth != null;
+        // Allow authenticated users to create tags (adjust if only admins should create)
+        allow create: if request.auth != null;
+        // Allow update/delete only by specific roles (e.g., admin - not implemented here) or creator if tracked
+        allow update, delete: if false; // Example: restricted for now
+     }
+
+     // --- Invitations Collection ---
+     match /invitations/{invitationId} {
+        // Allow reading an invitation only by the recipient or inviter
+        allow read: if request.auth != null &&
+                     (resource.data.recipientUserId == request.auth.uid || resource.data.inviterId == request.auth.uid);
+        // Allow creating an invitation if authenticated (inviter is the auth user)
+        allow create: if request.auth != null && request.resource.data.inviterId == request.auth.uid;
+        // Allow updating status (accept/decline) only by the recipient
+        allow update: if request.auth != null && resource.data.recipientUserId == request.auth.uid &&
+                       request.resource.data.status != resource.data.status; // Only allow status changes
+        // Allow deleting only by inviter if it's still pending? Or never allow delete?
+        allow delete: if false; // Example: restrict deletion
+     }
+
+    // Add other collections and rules as needed (e.g., billing, general settings)
+
+  }
+}

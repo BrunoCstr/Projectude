@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "lib", // Keep the output directory the same
+    "sourceMap": true
+  },
+  "include": [
+    "src/**/*.ts" // Include all TypeScript files in the src directory
+  ],
+   "exclude": [
+     "node_modules", // Exclude node_modules
+     "lib" // Exclude the output directory
+   ]
+}
