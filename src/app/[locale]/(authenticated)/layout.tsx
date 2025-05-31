@@ -33,12 +33,7 @@ export default function AuthenticatedLocaleLayout({
     if (!loading && isAuthenticated && userData) {
       const preferredLang = userData.preferences?.language || "en";
 
-      // Só redireciona se o locale atual for diferente do preferido
-      if (preferredLang !== currentLocale) {
-        const pathWithoutLocale = stripLocale(pathname, currentLocale);
-        const newUrl = `/${preferredLang}${pathWithoutLocale}`;
-        router.replace(newUrl);
-      }
+      setCookie("lang", preferredLang, { path: "/", maxAge: 60 * 60 * 24 * 365 });
 
       // Atualiza o cookie se necessário
       if (typeof window !== "undefined") {

@@ -2,13 +2,12 @@
 
 import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
-
-// 1) importe e configure o next-intl
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
+
 const intlMiddleware = createMiddleware(routing);
 
-// 2) sua lista de rotas protegidas / públicas
+// Lista de rotas protegidas / públicas
 const protectedPaths = [
   '/dashboard', '/my-projects', '/shared-with-me', '/collaborators',
   '/comments', '/tags', '/settings', '/profile',
@@ -16,21 +15,26 @@ const protectedPaths = [
 ];
 const publicOnlyPaths = ['/login'];
 
+// Função para verificar se um locale é suportado
+function isSupportedLocale(locale: string): locale is (typeof routing.locales)[number] {
+  return (routing.locales as readonly string[]).includes(locale);
+}
+
 export default function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const sessionCookie = request.cookies.get('projectude-session')?.value;
   const isAuth = Boolean(sessionCookie);
 
   const cookieLang = request.cookies.get('lang')?.value;
-  const supportedLocales = ['en', 'pt', 'es', 'fr'];
+  const supportedLocales: string[] = [...routing.locales]; // Converte para string[]
 
-  // Redireciona apenas se estiver na raiz "/"
+  // Redireciona se estiver na raiz "/"
   if (pathname === '/') {
-    const toLocale = cookieLang && supportedLocales.includes(cookieLang) ? cookieLang : 'en';
+    const toLocale = isSupportedLocale(cookieLang ?? '') ? cookieLang! : routing.defaultLocale;
     return NextResponse.redirect(new URL(`/${toLocale}`, request.url));
   }
 
-  // Aplica o middleware do next-intl
+  // Middleware do next-intl
   const localeResponse = intlMiddleware(request);
   if (localeResponse) return localeResponse;
 
